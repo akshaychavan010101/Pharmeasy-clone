@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5cb8a0be4f.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <style>
+        /* this is the top of the nav */
+        #top {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid rgb(179, 210, 210);
+            padding: 10px;
+        }
+
+        #logo {
+            width: 25%;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #logo>div:nth-child(1) {
+            width: 55%;
+            /* border: 1px solid; */
+        }
+
+        #logo>div:nth-child(2) {
+            width: 40%;
+            /* border: 1px solid; */
+            line-height: 8px;
+
+        }
+
+        #logo>div:nth-child(1)>img {
+            padding: 5px;
+            width: 100%;
+            height: 75%
+        }
+
+        #logo>div:nth-child(1)>div {
+            width: 100%;
+
+        }
+
+
+
+
+
+
+        #search {
+            width: 35%;
+            border: 1px solid;
+            display: flex;
+            border-radius: 30px;
+            border: 1px solid rgb(179, 210, 210);
+
+        }
+
+        #search>i {
+            width: 10%;
+            font-size: 20px;
+            padding-left: 30px;
+            /* border: 1px solid; */
+            margin: auto;
+        }
+
+        #search>input {
+            width: 95%;
+            border: none;
+            height: 90%;
+            margin: auto;
+
+        }
+
+        #search>div {
+            width: 40%;
+            /* border: 1px solid; */
+            border-radius: 30px;
+            height: 85%;
+            margin: auto;
+            margin-right: 5px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #search>div>button {
+            width: 90%;
+            border: none;
+            height: 100%;
+            border-radius: 30px;
+            background-color: rgb(10, 119, 119);
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+
+
+        #otherIcons {
+            width: 30%;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #otherIcons>div {
+            width: 18%;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+
+        #otherIcons>div:nth-child(1) {
+            width: 35%;
+            border: none;
+            display: flex;
+            height: 80%;
+            border-radius: 10px;
+            background-color: #eff6f9;
+        }
+
+        #otherIcons>div>i {
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        #otherIcons>div:nth-child(1)>i {
+            font-size: 30px;
+            padding: 10px;
+        }
+
+
+
+        /* this is the bottom */
+        #bottom {
+            border-bottom: 1px solid #bfe8f7;
+
+        }
+
+        #bottom>div {
+            display: flex;
+            width: 60%;
+            margin: auto;
+            margin-top: 5px;
+            justify-content: space-between;
+            font-size: 15px;
+            font-family: Inter, sans-serif;
+            font-weight: bold;
+            color: rgb(76, 75, 75);
+            padding: 10px;
+        }
+
+        #bottom>div.div {
+            width: 15%;
+
+        }
+
+        #Summary {
+            /* border: 1px solid red; */
+            width: 90%;
+            margin: auto;
+        }
+
+        #Summary>div:nth-child(1) {
+            padding: 30px;
+            padding-left: 300px;
+            font-family: Inter, sans-serif;
+            color: rgb(76, 75, 75);
+        }
+
+        #Summary>div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+            /* border: 1px solid ; */
+            line-height: 10px;
+
+        }
+
+        #Summary>div:nth-child(2)>div {
+            width: 10%;
+            font-family: Inter, sans-serif;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            border-radius: 10px;
+        }
+
+        #Summary>div:nth-child(2)>div>img {
+            width: 75%;
+            border-bottom: 1px solid gray;
+            display: block;
+            margin: auto;
+        }
+
+        #Summary>div:nth-child(2)>div p {
+            color: rgb(76, 75, 75);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #Summary>div:nth-child(2)>div p+p {
+            color: rgb(228, 82, 82);
+            text-align: center;
+            font-size: small;
+        }
+
+        #offersSlidingBanner {
+            /* border: 1px solid; */
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+
+        }
+
+        .swiper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+
+        }
+
+        .swiper-slide>img {
+            width: 30%;
+            border-radius: 20px;
+            display: block;
+        }
+
+        #Tests>div:nth-child(1) {
+            /* border: 1px solid red; */
+            margin: 10px;
+        }
+
+        #Tests>div:nth-child(1)>div {
+            display: flex;
+            width: 20%;
+            /* border: 1px solid blue; */
+            align-items: center;
+            font-size: 18px;
+            line-height: 1px;
+
+        }
+
+        #Tests>div:nth-child(1)>div>img {
+            /* border: 1px solid red; */
+            width: 30%;
+            height: 20%;
+            display: block;
+            padding: 10px;
+
+
+        }
+
+
+        #Tests {
+            /* border: 1px solid red; */
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            font-family: Inter, sans-serif;
+            color: rgb(76, 75, 75);
+
+        }
+
+        #TestCards {
+            /* border: 1px solid gray; */
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+
+        }
+
+        #TestCards>div>img {
+            width: 100%;
+        }
+
+
+      
+
+        
+       
+    </style>
+</head>
+
+<body>
+
+    <!-- this is top and bottom of the navbar -->
+    <div id="top">
+        <div id="logo">
+            <div>
+                <img src="./logo.png" alt="">
+            </div>
+            <div>
+                <p>Delivery to</p>
+                <p>431103 AB Street</p>
+            </div>
+        </div>
+        <div id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" name="search" id="search" placeholder="Search for">
+            <div>
+                <button>
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <div id="otherIcons">
+            <div>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <p>Download App</p>
+            </div>
+            <div>
+                <i class="fa-regular fa-user"></i>
+                <p>User</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-tags"></i>
+                <p>Offers</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="bottom">
+        <div>
+            <div>Medicine</div>
+            <div>Lab Tests</div>
+            <div>Healthcare </div>
+            <div>Surgeries</div>
+            <div>Health Blogs</div>
+            <div>PLUS</div>
+            <div>Offers</div>
+            <div>Value Store</div>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="Summary">
+            <div>
+                <h2>What are you looking for?</h2>
+            </div>
+            <div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0" />
+                    <p>Medicine</p>
+                    <p>UPTO 10% OFF</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0" />
+                    <p>Lab Tests</p>
+                    <p>UPTO 70% OFF</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/healthcare_ff.webp?dim=256x0" />
+                    <p>Healthcare</p>
+                    <p>UPTO 60% OFF</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/offers_1_ff.webp?dim=256x0" />
+                    <p>Surgeries</p>
+                    <p></p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0" />
+                    <p>Health Blogs</p>
+                    <p></p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0" />
+                    <p>PLUS</p>
+                    <p>SAVE 10% EXTRA</p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0" />
+                    <p>Offers</p>
+                    <p></p>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0" />
+                    <p>Value Store</p>
+                    <p>UPTO 50% OFF</p>
+                </div>
+            </div>
+        </div>
+        <!-- this is the sliding banner -->
+        <div id="offersSlidingBanner">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="./sliding banner1.webp">
+                        <img src="./sliding banner2.webp" alt="">
+                        <img src="./sliding banner3.jpg" alt="">
+                    </div>
+                </div>
+                <!--  pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!--  navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
+            </div>
+        </div>
+
+
+        <div id="Tests">
+            <div>
+                <h2>Lab Tests by Health Concern</h2>
+                <div>
+                    <p>Powered By</p>
+                    <img src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1440x0" alt="">
+                </div>
+            </div>
+            <div id="TestCards">
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/10dfe8c8aa7-HealthCheckups.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6c5479c6c0c-Vitamins.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/69588f95674-Diabetes.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/c507b2563fd-thyroid.png?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/eeb3fe3251f-WomenCare.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/355e9b77fb5-FeverInfection.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6e78a241e48-CovidCare.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/a953829ca96-Heart.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/94616a36a9a-Lifestyle.jpg?dim=256x0">
+                </div>
+                <div>
+                    <img
+                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/64444851b5e-BoneHealth.jpg?dim=256x0">
+                </div>
+
+            </div>
+        </div>
+
+
+      
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            loop: true,
+            //  pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+</body>
+
+</html>
