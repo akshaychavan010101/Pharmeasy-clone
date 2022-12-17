@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+#left {
+    width: 60%;
+    border: 2px solid rgb(192, 188, 188);
+    border-radius: 8px;
+    padding: 20px;
+    margin-right:40% ;
+   
+}
+
+#title {
+    width: 100%;
+    /* margin: auto; */
+    /* border: 1px solid red; */
+    border-bottom: 2px solid rgb(175, 171, 171);
+    display: flex;
+    justify-content: space-between;
+}
+
+#productDisplay{
+    /* border: 2px solid rgb(26, 26, 32); */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 40px;
+   
+}
+#productDisplay>div{
+    /* border: 3px solid greenyellow; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+}
+
+#productDisplay>div>div:nth-child(1){
+    /* border: 1px solid gray; */
+    width:30%;
+    padding: 20px;
+}
+
+#productDisplay>div>div:nth-child(1)>img{
+    /* border: 5px solid rgb(231, 46, 46); */
+    width: 180px;
+    height: 250px;
+}
+
+#productDisplay>div>div:nth-child(2){
+    /* border: 7px solid rgb(128, 128, 128); */
+    width:50%;
+    padding:20px
+}
+#productDisplay button{
+    width: 30%;
+    padding: 10px;
+    background-color: #0A7777;
+    border: none;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+
+
+#right {
+    width: 30%;
+    height: fit-content;
+    border: 2px solid rgb(199, 196, 196);
+    border-radius: 8px;
+    padding: 20px;
+    position: fixed;
+    margin-left: 60%;
+}
+
+#cartTotal {
+    display: flex;
+    border-bottom: 2px solid rgb(196, 194, 194);
+    align-items: center;
+    justify-content: space-between;
+}
+#Amount{
+    display: flex;
+}
+#Proceedbutton{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(85, 135, 145);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+#billSummary {
+    border-top: 2px solid rgb(183, 182, 182);
+}
+
+#billSummary>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

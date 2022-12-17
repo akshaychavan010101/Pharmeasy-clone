@@ -186,18 +186,20 @@
 
 #productImage {
     width: 20%;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     padding: 20px;
     margin: auto;
+    /* border:1px solid; */
 }
 
 #productImage>div>img {
-    width: 100%;
+    width: 180px;
+    height: 300px;
 }
 
 #Addtocart {
-    width: 40%;
-    border-bottom: 1px solid gray;
+    width: 50%;
+    /* border-bottom: 1px solid gray; */
     padding: 20px;
     margin: auto;
 
@@ -239,7 +241,11 @@
 }
 
 
-
+#descdiv{
+    width: 80%;
+    /* border: 1px solid gray; */
+    padding: 28px;
+}
 
 
 /* this is the footer */

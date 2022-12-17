@@ -401,11 +401,13 @@ background: transparent;
 
 }
 
-#category>div>div>img {
+#category>div>div>a img {
     /* border: 1px solid; */
     width: 95%;
     display: block;
     margin: auto;
+    border: none;
+   
 }
 
 #CategoryHeading {
