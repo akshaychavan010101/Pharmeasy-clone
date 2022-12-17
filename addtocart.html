@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="2" id="refresh" > -->
     <title>Add to Cart</title>
     <link rel="stylesheet" href="./addtocart.css">
     <script src="https://kit.fontawesome.com/5cb8a0be4f.js"></script>
@@ -82,22 +83,20 @@
             <!-- this is the product veiwer div -->
             <div>
                 <!-- product image(display the product here) -->
-                <img
-                    src="https://cdn01.pharmeasy.in/dam/products_otc/I05582/dr-morepen-gluco-one-bg-03-glucometer-test-strips-box-of-50-1-1669655233.jpg?dim=700x0&dpr=1&q=100">
+                <img id="showthis"
+                    >
 
             </div>
 
         </div>
         <div id="Addtocart">
-            <h2>Dr Morepen Gluco One Bg 03 Glucometer Test Strips Box Of 50</h2>
+            <h2 id="proname">Dr Morepen Gluco One Bg 03 Glucometer Test Strips Box Of 50</h2>
             <p>Visit the store</p>
-            <p>
+            <p id="price">
                 ₹450
             </p>
-            <p>
-                Description
-            </p>
-            <button>
+            
+            <button id="Addtocartbt">
                 Add To Cart
             </button>
             <!-- this is the middle div with the add to cart and the product details -->
@@ -105,8 +104,8 @@
         </div>
         <div id="Viewcart">
             <!-- this the div with view cart button -->
-            <h3>Please add item(s) to proceed</h3>
-            <button>View Cart</button>
+            <h3 id="cartheading">Please add item(s) to proceed</h3>
+            <button id="viewcartBt">View Cart</button>
             <div>
                 <h3>Offers Just for you</h3>
                 <img src="" alt="">
@@ -115,6 +114,23 @@
                 <a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png" target="_blank">100% Money Back Guarantee ></a>
             </div>
         </div>
+        
+    </div>
+    <div id="descdiv">
+        <h3>Description</h3>
+        <p id="Description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est quo illo consectetur distinctio deserunt, placeat veritatis reiciendis dolorem suscipit magni rem expedita ratione amet ab quaerat quis a sequi. <br>
+            Inventore minus quia animi libero sit tenetur similique est odit ipsum laborum natus quibusdam possimus dignissimos molestias, perferendis adipisci veniam, numquam fugit quas ratione! Natus enim optio nostrum eum dolorum! <br>
+            Esse illo harum enim! Dicta reprehenderit impedit labore et dolores autem, tempore quod quae excepturi itaque quaerat possimus sapiente! Esse eius enim veniam distinctio qui ullam dolorum natus hic accusamus?<br>
+            Nam a commodi neque qui amet? Expedita, laboriosam repellat. Sed dicta quis consequuntur ipsa pariatur blanditiis distinctio sapiente amet quaerat, inventore id perspiciatis ex corrupti cumque et nisi maiores excepturi?
+            Quos doloribus vel eius eaque perferendis voluptatum numquam architecto fugiat et asperiores! Laborum hic nisi obcaecati repellat ullam fuga rerum voluptatem? Tenetur odit iusto optio. Ab fugiat blanditiis qui cum.
+         </p>
+
+         <h3>Manufactured By</h3>
+         <p>MediEasyIn Pvt.Ltd.</p>
+
+         <h3>Prescription</h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, laudantium.</p>
     </div>
 
 
@@ -275,3 +291,4 @@
 </body>
 
 </html>
+<script src="./addtocart.js"></script>
