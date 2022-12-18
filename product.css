@@ -14,7 +14,7 @@
 }
 
 #logo {
-    width: 25%;
+    width: 20%;
     /* border: 1px solid; */
     display: flex;
     justify-content: space-between;
@@ -50,6 +50,7 @@
 
 #search {
     width: 35%;
+    height: 50px;
     border: 1px solid;
     display: flex;
     border-radius: 30px;
@@ -70,6 +71,7 @@
     border: none;
     height: 90%;
     margin: auto;
+    outline: none;
 
 }
 

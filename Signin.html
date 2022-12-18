@@ -84,7 +84,7 @@
             <br><br>
             <a href="https://mcdn.wallpapersafari.com/medium/43/66/NxQWdf.jpg" target="_blank">Lost Password</a>
             <br>
-            <a href="http://127.0.0.1:5500/signup.html">Don't Have an Account</a>
+            <a href="/signup.html">Don't Have an Account</a>
         </form>
     </div>
 </body>
@@ -103,13 +103,9 @@
             if (element.username == signinform.Username.value) {
                 if (element.password == signinform.Password.value) {
                     alert("Login Success!");
-                    window.location.assign("http://127.0.0.1:5500/indexa.html");
-
+                    window.location = "/indexa.html";
                 }
-            } else {
-                alert("Wrong Credentials");
-
-            }
+            } 
         });
 
     }

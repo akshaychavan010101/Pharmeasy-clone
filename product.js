@@ -21,8 +21,28 @@ function fetcedData() {
 
 
 
+let sortby = document.getElementById("sortby");
+sortby.addEventListener("change", () => {
+    let sortvalue = sortby.value;
+    if (sortvalue == "Price low to high") {
+        let x = data.sort((a, b) => { return a.price - b.price });
+        displayinitial(x)
 
-let stored = JSON.parse(localStorage.getItem("stored"))||[];
+    } else if (sortvalue == "Price high to low") {
+        let x = data.sort((a, b) => { return b.price - a.price });
+        displayinitial(x)
+    }
+    else {
+        let x = data;
+        displayinitial(x)
+    }
+})
+
+
+
+
+
+let stored = JSON.parse(localStorage.getItem("stored")) || [];
 
 
 
@@ -31,21 +51,6 @@ let dofilter = document.getElementById("")
 
 
 
-let sortby = document.getElementById("sortby");
-sortby.addEventListener("click", () => {
-    let sortvalue = sortby.value;
-    if (sortvalue == "Price low to high") {
-        let x = data.sort((a, b) => { return a.price - b.price });
-        display(x) || displayinitial()
-
-    } else if (sortvalue == "Price high to low") {
-        let x = data.sort((a, b) => { return b.price - a.price });
-        display(x) || displayinitial()
-    } else {
-        let x = data;
-        display(x)
-    }
-})
 
 
 let bigDisplay = document.getElementById("bigDisplay");
@@ -74,7 +79,7 @@ function displayinitial() {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
                 productArray = [];
-                window.location.assign("http://127.0.0.1:5500/addtocart.html");
+                window.location.assign("/addtocart.html");
             })
 
             let h5 = document.createElement("h5");
@@ -86,25 +91,31 @@ function displayinitial() {
             let p2 = document.createElement("p");
             p2.innerText = "Price " + element.price
 
+          
+
+
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
+
+
+
 
 
 
@@ -119,12 +130,10 @@ function displayinitial() {
 
 
 
-
-
 let category1 = document.getElementById("category1");
-category1.addEventListener("click", display);
+category1.addEventListener("click", display1);
 
-function display() {
+function display1() {
     bigDisplay.innerHTML = null
 
     data.forEach((element, index) => {
@@ -139,7 +148,7 @@ function display() {
             img.addEventListener("click", () => {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
-                window.location.assign("http://127.0.0.1:5500/addtocart.html")
+                window.location.assign("/addtocart.html")
                 productArray = [];
             })
             let h5 = document.createElement("h5");
@@ -153,21 +162,21 @@ function display() {
 
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
 
@@ -187,7 +196,8 @@ function display() {
 
 
 let category2 = document.getElementById("category2");
-category2.addEventListener("click", () => {
+category2.addEventListener("click", display2);
+function display2() {
     bigDisplay.innerHTML = null
     data.forEach((element, index) => {
         if (element.category == "Skin Care") {
@@ -201,7 +211,7 @@ category2.addEventListener("click", () => {
             img.addEventListener("click", () => {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
-                window.location.assign("http://127.0.0.1:5500/addtocart.html")
+                window.location.assign("/addtocart.html")
                 productArray = [];
             })
             let h5 = document.createElement("h5");
@@ -215,35 +225,39 @@ category2.addEventListener("click", () => {
 
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
+
+
+
 
 
             smalldisplay1.append(img, h5, p1, p2, addCartbt);
             bigDisplay.append(smalldisplay1);
         }
     })
-});
+}
 
 
 
 let category3 = document.getElementById("category3");
-category3.addEventListener("click", () => {
+category3.addEventListener("click", display3)
+function display3() {
     bigDisplay.innerHTML = null
 
 
@@ -259,7 +273,7 @@ category3.addEventListener("click", () => {
             img.addEventListener("click", () => {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
-                window.location.assign("http://127.0.0.1:5500/addtocart.html")
+                window.location.assign("/addtocart.html")
                 productArray = [];
             })
             let h5 = document.createElement("h5");
@@ -273,34 +287,42 @@ category3.addEventListener("click", () => {
 
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
+
+
 
 
             smalldisplay1.append(img, h5, p1, p2, addCartbt);
             bigDisplay.append(smalldisplay1);
         }
     })
-});
+}
+
+
+
+
+
 
 
 let category4 = document.getElementById("category4");
-category4.addEventListener("click", () => {
+category4.addEventListener("click", display4)
+function display4() {
     bigDisplay.innerHTML = null
 
 
@@ -316,7 +338,7 @@ category4.addEventListener("click", () => {
             img.addEventListener("click", () => {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
-                window.location.assign("http://127.0.0.1:5500/addtocart.html")
+                window.location.assign("/addtocart.html")
                 productArray = [];
             })
             let h5 = document.createElement("h5");
@@ -329,34 +351,42 @@ category4.addEventListener("click", () => {
             p2.innerText = "Price " + element.price
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
+
+
 
 
             smalldisplay1.append(img, h5, p1, p2, addCartbt);
             bigDisplay.append(smalldisplay1);
         }
     })
-});
+}
+
+
+
+
+
 
 
 let category5 = document.getElementById("category5");
-category5.addEventListener("click", () => {
+category5.addEventListener("click", display5);
+function display5() {
     bigDisplay.innerHTML = null
 
 
@@ -372,7 +402,7 @@ category5.addEventListener("click", () => {
             img.addEventListener("click", () => {
                 productArray.push(element);
                 localStorage.setItem("displayThis", JSON.stringify(productArray));
-                window.location.assign("http://127.0.0.1:5500/addtocart.html")
+                window.location.assign("/addtocart.html")
                 productArray = [];
             })
             let h5 = document.createElement("h5");
@@ -387,21 +417,21 @@ category5.addEventListener("click", () => {
 
             let addCartbt = document.createElement("button");
             addCartbt.innerText = "Add to Cart"
-            addCartbt.addEventListener("click",()=>{
+            addCartbt.addEventListener("click", () => {
                 let flag = false;
-                for(let i=0; i<stored.length; i++){
-                    if(stored[i].id === element.id){
-                       flag = true;
-                       break;
+                for (let i = 0; i < stored.length; i++) {
+                    if (stored[i].id === element.id) {
+                        flag = true;
+                        break;
                     }
                 }
-                if(flag === true){
+                if (flag === true) {
                     alert("Product is already in the cart");
-                }else{
+                } else {
                     stored.push(element);
-                    localStorage.setItem("stored",JSON.stringify(stored));
+                    localStorage.setItem("stored", JSON.stringify(stored));
                     alert("Product added to Cart");
-                    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+                    window.location.assign("/carttocheckout.html")
                 }
             });
 
@@ -410,7 +440,8 @@ category5.addEventListener("click", () => {
             bigDisplay.append(smalldisplay1);
         }
     })
-});
+}
+
 
 
 

@@ -63,5 +63,5 @@ displayFromproducts();
 
 let Proceedbutton = document.getElementById("Proceedbutton");
 Proceedbutton.addEventListener("click",()=>{
-    window.location.assign("http://127.0.0.1:5500/checkout.html")
+    window.location.assign("/checkout.html")
 })

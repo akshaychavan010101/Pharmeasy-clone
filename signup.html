@@ -122,7 +122,11 @@
     signupform.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let ob = {
+        if(signupform.Name.value == "" || signupform.Contact.value == "" || signupform.Username.value == "" || signupform.Password.value == "" ){
+            alert("Please fill all the details");
+            window.location.assign("/signup.html");
+        }else{
+            let ob = {
             name: signupform.Name.value,
             contact: signupform.Contact.value,
             username: signupform.Username.value,
@@ -132,6 +136,7 @@
         ar.push(ob);
         localStorage.setItem("ar", JSON.stringify(ar));
         alert("Acount Created")
-        window.location.assign("http://127.0.0.1:5500/Signin.html")
+        window.location.assign("/Signin.html")
+        }
     })
 </script>
