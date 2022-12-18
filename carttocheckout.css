@@ -1,6 +1,142 @@
-body {
+#top {
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid rgb(179, 210, 210);
+   
+    
+}
+
+#logo {
+    width: 25%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo>div:nth-child(1) {
+    width: 55%;
+    /* border: 1px solid; */
+}
+
+#logo>div:nth-child(2) {
+    width: 40%;
+    /* border: 1px solid; */
+    line-height: 8px;
+
+}
+
+#logo>div:nth-child(1)>a>img {
+    padding: 5px;
+    width: 100%;
+    height: 75%
+}
+
+#logo>div:nth-child(1)>div {
+    width: 100%;
+
+}
+
+
+
+
+
+
+#search {
+    width: 35%;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid rgb(179, 210, 210);
+
+}
+
+#search>i {
+    width: 10%;
+    font-size: 20px;
+    padding-left: 30px;
+    /* border: 1px solid; */
+    margin: auto;
+}
+
+#search>input {
+    width: 95%;
+    border: none;
+    height: 90%;
+    margin: auto;
+    outline: none;
+
+}
+
+#search>div {
+    width: 40%;
+    /* border: 1px solid; */
+    border-radius: 30px;
+    height: 85%;
+    margin: auto;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search>div>button {
+    width: 90%;
+    border: none;
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgb(10, 119, 119);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+#otherIcons {
+    width: 30%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#otherIcons>div {
+    width: 18%;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+#otherIcons>div:nth-child(1) {
+    width: 35%;
+    border: none;
+    display: flex;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #eff6f9;
+}
+
+#otherIcons>div>i {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#otherIcons>div:nth-child(1)>i {
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+#maindiv {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 #left {

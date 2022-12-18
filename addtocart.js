@@ -44,7 +44,7 @@ Addtocartbt.addEventListener("click", () => {
         console.log("true")
         stored.push(productArray[0]);
         localStorage.setItem("stored", JSON.stringify(stored));
-        window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+        window.location.assign("/carttocheckout.html")
         alert("Product added to the cart");
     }
 })
@@ -52,7 +52,7 @@ Addtocartbt.addEventListener("click", () => {
 
 let viewcartBt = document.getElementById("viewcartBt");
 viewcartBt.addEventListener("click",()=>{
-    window.location.assign("http://127.0.0.1:5500/carttocheckout.html")
+    window.location.assign("/carttocheckout.html")
 });
 
 
