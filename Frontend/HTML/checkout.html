@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/checkout.css">
+</head>
+
+<body>
+    <div class="containerofCheckout">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing address</h3>
+
+                    <div class="inputbox">
+                        <span>Full name :</span>
+                        <input type="text" placeholder="John doe">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="example@gmail.com">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="ABC Street">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>City :</span>
+                        <input type="text" placeholder="Bombay">
+                    </div>
+
+                    <div class="flex">
+                        <span>State :</span>
+                        <input type="text" placeholder="India">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Zip code :</span>
+                        <input type="number" placeholder="12345">
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+
+
+                    <div class="inputbox">
+                        <span>Cards accepted :</span>
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Name on card:</span>
+                        <input type="text" placeholder="Mr. John doe">
+                    </div>
+
+                    
+
+                    <div class="inputbox">
+                        <span>Credit card no :</span>
+                        <input type="number" placeholder="0000 0000 000">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>Exp.month :</span>
+                        <input type="text" placeholder="january">
+                    </div>
+
+                    <div class="flex">
+                        <span>Year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+
+                    <div class="inputbox">
+                        <span>CW :</span>
+                        <input type="number" placeholder="000">
+                    </div>
+
+
+                </div>
+            </div>
+            <input type="submit" value="Proceed to checkout" class="submit-btn">
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    let billPay = document.querySelector("form");
+    billPay.addEventListener("submit",(e)=>{
+     e.preventDefault();
+
+     window.location.assign("/HTML/checkout.html")
+    })
+</script>
