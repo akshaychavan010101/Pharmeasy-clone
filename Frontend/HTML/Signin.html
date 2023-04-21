@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url(https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&w=1000&q=80);
+        /* background-position: center; */
+        background-size: cover;
+        font-family: sans-serif;
+      }
+
+      #loginbox {
+        width: 400px;
+        border: 1px solid;
+        height: 500px;
+        background: #597751;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 40px 40px;
+        color: white;
+        line-height: 25px;
+        font-size: large;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+
+      #Username {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        outline: none;
+      }
+
+      #Password {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        outline: none;
+      }
+
+      #Login {
+        padding: 5px;
+        border-radius: 5px;
+        color: rgb(8, 100, 37);
+        font-weight: bold;
+      }
+
+      a {
+        color: rgb(20, 5, 48);
+        text-underline-offset: 2px;
+        color: white;
+        /* text-decoration-line: none; to remove the underline of the a tag element  */
+        font-size: medium;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loginbox">
+      <h1>Login Here</h1>
+      <form action="" id="signinform">
+        <p>Username</p>
+        <input type="text" name="" id="Username" placeholder="Enter Username" />
+        <p>Password</p>
+        <input type="password" id="Password" placeholder="Enter Password" />
+        <br /><br />
+        <input type="submit" value="Login" id="Login" />
+        <br /><br />
+        <a
+          href="https://mcdn.wallpapersafari.com/medium/43/66/NxQWdf.jpg"
+          target="_blank"
+          >Lost Password</a
+        >
+        <br />
+        <a href="../HTML/signup.html">Don't Have an Account</a>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  let userInf = JSON.parse(localStorage.getItem("ar")) || [];
+  let signinform = document.getElementById("signinform");
+  signinform.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (userInf.length == 0) {
+      alert("Account not Found");
+    } else {
+      userInf.forEach((element, index) => {
+        if (element.username == signinform.Username.value) {
+          if (element.password == signinform.Password.value) {
+            alert("Login Success!");
+            window.location.assign("Frontend/HTML/indexa.html");
+            return;
+          }
+        }
+      });
+    }
+  });
+</script>

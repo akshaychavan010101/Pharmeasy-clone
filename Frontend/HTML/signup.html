@@ -124,7 +124,7 @@
 
         if(signupform.Name.value == "" || signupform.Contact.value == "" || signupform.Username.value == "" || signupform.Password.value == "" ){
             alert("Please fill all the details");
-            window.location.assign("/signup.html");
+            window.location.assign("/HTML/signup.html");
         }else{
             let ob = {
             name: signupform.Name.value,
@@ -136,7 +136,7 @@
         ar.push(ob);
         localStorage.setItem("ar", JSON.stringify(ar));
         alert("Acount Created")
-        window.location.assign("/Signin.html")
+        window.location.assign("/Frontend/HTML/Signin.html")
         }
     })
 </script>
