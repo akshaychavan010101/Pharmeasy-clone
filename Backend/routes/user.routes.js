@@ -7,10 +7,17 @@ const { User } = require("../models/user.model");
 const redis = require("redis");
 const { authentication } = require("../middlewares/authentication");
 const { Blacklist } = require("../models/blacklist.model");
-const passport = require("../middlewares/google.auoth");
+const passport = require("passport");
+require("../middlewares/google.auoth");
 
-UserRouter.post("/register", async (req, res) => {
+
+UserRouter.post("/signup", async (req, res) => {
   try {
+    let exist = await User.findOne({ email: req.body.email });
+    if (exist) {
+      return res.status(400).send({ error: "User already exists" });
+    }
+
     const { name, contact, email, password, role } = req.body;
     const user = new User({ name, contact, email, password, role });
     await user.save();
@@ -20,13 +27,13 @@ UserRouter.post("/register", async (req, res) => {
   }
 });
 
-UserRouter.post("/login", async (req, res) => {
+UserRouter.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
     let user = await User.findOne({ email });
     let TosendUser = user;
     if (!user) {
-      return res.status(400).send({ error: "Invalid Credentials" });
+      return res.status(400).send({ error: "User Does Not Exists" });
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
@@ -70,7 +77,7 @@ UserRouter.get(
     session: false,
   }),
   function (req, res) {
-    console.log(req.user);
+   console.log(req.user);
   }
 );
 

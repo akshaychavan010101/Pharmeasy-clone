@@ -1,769 +1,1142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/5cb8a0be4f.js"></script>
     <title>Document</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../Styles/indexa.css" />
+  </head>
 
-
-    <link rel="stylesheet" href="../Styles/indexa.css">
-
-    
-</head>
-
-<body>
-
-
-
-
-    
-
+  <body>
     <!-- this is top and bottom of the navbar -->
     <div id="top">
-        <div id="logo">
-            <div>
-               <a href="../HTML/indexa.html"> <img src="../images/logo.png" alt=""></a>
-             
-            </div>
-            <div>
-                <p>Delivery to</p>
-                <p>431103 AB Street</p>
-            </div>
+      <div id="logo">
+        <div>
+          <a href="../HTML/indexa.html">
+            <img src="../images/logo.png" alt=""
+          /></a>
         </div>
-        <div id="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" name="search" id="search" placeholder="Search for">
-            <div>
-                <button>
-                    Search
-                </button>
-            </div>
+        <div>
+          <p>Delivery to</p>
+          <p>431103 AB Street</p>
         </div>
+      </div>
+      <div id="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" name="search" id="search" placeholder="Search for" />
+        <div>
+          <button id="search_btn">Search</button>
+        </div>
+      </div>
 
-        <div id="otherIcons">
-            <div>
-                <i class="fa-solid fa-mobile-screen"></i>
-                <a href="https://apps.apple.com/IN/app/id982432643?mt=8"> <p>Download App</p></a>
-            </div>
-            <div>
-                <i class="fa-regular fa-user"></i>
-                <p>User</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-tags"></i>
-                <a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"> <p>Offers</p></a>
-               
-            </div>
-            <div>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="../HTML/carttocheckout.html"><p>Cart</p></a>
-                
-            </div>
-
+      <div id="otherIcons">
+        <div>
+          <i class="fa-solid fa-mobile-screen"></i>
+          <a href="https://apps.apple.com/IN/app/id982432643?mt=8">
+            <p>Download App</p></a
+          >
         </div>
+        <div>
+          <i class="fa-regular fa-user"></i>
+          <p>User</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-tags"></i>
+          <a
+            href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+          >
+            <p>Offers</p></a
+          >
+        </div>
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="../HTML/carttocheckout.html"><p>Cart</p></a>
+        </div>
+      </div>
     </div>
 
-
-
-
-
-
-
-     <div class="menu-bar">
-    <ul>
-        <li class="active"> <a href="https://www.who.int/health-topics" target="_self">Medicine </a> </li>
-        <li> <a href="https://www.who.int/health-topics">Lab Tests</a>
-       
+    <div class="menu-bar">
+      <ul>
+        <li class="active">
+          <a href="https://www.who.int/health-topics" target="_self"
+            >Medicine
+          </a>
         </li>
-        <li> <a href="#">Healthcare </a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li><a href="https://www.who.int/health-topics">Lab Tests</a></li>
+        <li>
+          <a href="#">Healthcare </a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li> <a href="https://www.who.int/health-topics">Surgeries</a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li>
+          <a href="https://www.who.int/health-topics">Surgeries</a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li><a href="https://www.who.int/health-topics">Health Blogs</a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li>
+          <a href="https://www.who.int/health-topics">Health Blogs</a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li><a href="https://www.who.int/health-topics">PLUS</a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li>
+          <a href="https://www.who.int/health-topics">PLUS</a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li> <a href="https://www.who.int/health-topics">Offers</a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li>
+          <a href="https://www.who.int/health-topics">Offers</a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li><a href="https://www.who.int/health-topics">Value Store</a>
-            <div class="subm">
-                <ul>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mega Clearance Sale</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Personal Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Food and Drinks</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Home Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Mother and Baby Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Skin Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Fitness Supplement</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Sexual Wellness</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Ayurvedic care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Diabetic Care</a></li>
-                   <li><a href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png">Health Condition</a></li>
-                </ul>
-            </div>
+        <li>
+          <a href="https://www.who.int/health-topics">Value Store</a>
+          <div class="subm">
+            <ul>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mega Clearance Sale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Food and Drinks</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Home Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Mother and Baby Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Fitness Supplement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Sexual Wellness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Ayurvedic care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Diabetic Care</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://clipart-library.com/image_gallery2/Nature-Free-Download-PNG.png"
+                  >Health Condition</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-    </ul>
-   </div>
-
-
-
-
-
-
-
-
-
-
-
+      </ul>
+    </div>
 
     <!-- this is the body of the home page -->
 
     <div id="body">
-        <div id="Summary">
-            <div>
-                <h2 >What are you looking for ? <span id="Question">Search</span></h2>
-            </div>
-            <div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0" /></a>
-                    <p>Medicine</p>
-                    <p>UPTO 10% OFF</p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0" /></a>
-                    <p>Lab Tests</p>
-                    <p>UPTO 70% OFF</p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/healthcare_ff.webp?dim=256x0" /></a>
-                    <p>Healthcare</p>
-                    <p>UPTO 60% OFF</p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/offers_1_ff.webp?dim=256x0" /></a>
-                    <p>Surgeries</p>
-                    <p></p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0" /></a>
-                    <p>Health Blogs</p>
-                    <p></p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0" /></a>
-                    <p>PLUS</p>
-                    <p>SAVE 10% EXTRA</p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0" /></a>
-                    <p>Offers</p>
-                    <p></p>
-                </div>
-                <div>
-                    <a href="https://www.who.int/health-topics"><img src="https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0" /></a>
-                    <p>Value Store</p>
-                    <p>UPTO 50% OFF</p>
-                </div>
-            </div>
-        </div>
-        <!-- this is the sliding banner -->
-        <div id="offersSlidingBanner">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="../images/banner1.webp">
-                        <img src="../images/sliding banner2.webp">
-                        <img src="../images/sliding banner3.jpg">
-                    </div>
-                </div>
-                <!--  pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!--  navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-
-            </div>
-        </div>
-
-        <!-- this is tests cards -->
-        <div id="Tests">
-            <div>
-                <h2>Lab Tests by Health Concern</h2>
-                <div>
-                    <p>Powered By</p>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1440x0" alt="">
-                </div>
-            </div>
-            <div id="TestCards">
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/10dfe8c8aa7-HealthCheckups.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6c5479c6c0c-Vitamins.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/69588f95674-Diabetes.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/c507b2563fd-thyroid.png?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/eeb3fe3251f-WomenCare.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/355e9b77fb5-FeverInfection.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6e78a241e48-CovidCare.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/a953829ca96-Heart.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/94616a36a9a-Lifestyle.jpg?dim=256x0">
-                </div>
-                <div>
-                    <img
-                        src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/64444851b5e-BoneHealth.jpg?dim=256x0">
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <!-- this is the payment offers -->
-        <div id="offercontainer">
-            <div>
-                <h2>Payment Offers</h2>
-            </div>
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img
-                            src="https://cdn01.pharmeasy.in/dam/banner/banner/a93d45ef9eb-HSBC.jpg?dim=1024x0" alt="">
-                        <div class="swiper-slide"><img
-                                src="https://cdn01.pharmeasy.in/dam/banner/banner/f3c446e4108-AMAZON.jpg?dim=1024x0"
-                                alt="">
-                        </div>
-                        <div class="swiper-slide"><img
-                                src="https://cdn01.pharmeasy.in/dam/banner/banner/9466405c308-au.jpg?dim=1024x0" alt="">
-                            <div class="swiper-slide"><img
-                                    src="https://cdn01.pharmeasy.in/dam/banner/banner/0c5c9ec6841-mobikwik.jpg?dim=1024x0"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-
-
-
-
-            </div>
-        </div>
-
-
-        <!-- this is shop by category cards -->
-        <div id="CategoryHeading">
-            <h2>Shop By Category</h2>
-        </div>
-        <div id="category">
-            <div>
-                <div>
-                    <a href="../HTML/product.html">
-                    <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/a7a03f6764393c65bab22e56de576a59.png?f=png?dim=256x0"
-                        alt="">
-                    </a>
-                </div>
-                <h3>Personal Care</h3>
-            </div>
-            <div>
-                <div>
-                    <a href="../HTML/product.html">
-                    <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/1e622b0308ec3ab48887512eaa3488a5.png?f=png?dim=256x0"
-                        alt="">
-                    </a>
-                </div>
-                <h3>Skin Care</h3>
-            </div>
-            <div>
-                <div>
-                    <a href="../HTML/product.html">
-                    <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/cfc8ee511609321e91eb86a34f5b2885.png?f=png?dim=256x0"
-                        alt="">
-                    </a>
-                </div>
-                <h3>Healthcare Devices</h3>
-            </div>
-            <div>
-                <div>
-                    <a href="../HTML/product.html">
-                    <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/335dae76832d370c94f0440f5ba89e1f.png?f=png?dim=256x0"
-                        alt="">
-                    </a>
-                </div>
-                <h3>Health Food & Drinks</h3>
-            </div>
-            <div>
-                <div>
-                    <a href="../HTML/product.html">
-                    <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/dc96175686f135b5a22d1e57165d0246.png?f=png?dim=256x0"
-                        alt="">
-                    </a>
-                </div>
-                <h3>Home Care</h3>
-            </div>
-
-
-        </div>
-
-
-
-
-
-
-
-
-        <!-- this is banner -->
-        <div id="healthBanner">
-          <div>
-            <h1>Become a
-                <img src="../images/plus logo.png" alt="">
-                member</h1>
-           <h3>And enjoy extra bachat on every order</h3>
-          </div>
-          <div>
-            <h3>Save 5% on allopathic medicines, 50% on lab tests & get FREE delivery with PLUS membership</h3>
-            <div>
-               EXPLORE NOW
-            </div>
-          </div>
-          <div>
-            <img src="https://assets.pharmeasy.in/apothecary/_next/static/media/PlusFamily.22677720.png?dim=1440x0" alt="">
-          </div>
-        </div>
-
-
-        <!-- footer -->
+      <div id="Summary">
         <div>
-
+          <h2>What are you looking for ? <span id="Question">Search</span></h2>
         </div>
+        <div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0"
+            /></a>
+            <p>Medicine</p>
+            <p>UPTO 10% OFF</p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0"
+            /></a>
+            <p>Lab Tests</p>
+            <p>UPTO 70% OFF</p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/healthcare_ff.webp?dim=256x0"
+            /></a>
+            <p>Healthcare</p>
+            <p>UPTO 60% OFF</p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/offers_1_ff.webp?dim=256x0"
+            /></a>
+            <p>Surgeries</p>
+            <p></p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0"
+            /></a>
+            <p>Health Blogs</p>
+            <p></p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0"
+            /></a>
+            <p>PLUS</p>
+            <p>SAVE 10% EXTRA</p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0"
+            /></a>
+            <p>Offers</p>
+            <p></p>
+          </div>
+          <div>
+            <a href="https://www.who.int/health-topics"
+              ><img
+                src="https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0"
+            /></a>
+            <p>Value Store</p>
+            <p>UPTO 50% OFF</p>
+          </div>
+        </div>
+      </div>
+      <!-- this is the sliding banner -->
+      <div id="offersSlidingBanner">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="../images/sliding banner1.webp" />
+              <img src="../images/sliding banner2.webp" />
+              <img src="../images/sliding banner3.jpg" />
+            </div>
+          </div>
+          <!--  pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!--  navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- this is tests cards -->
+      <div id="Tests">
+        <div>
+          <h2>Lab Tests by Health Concern</h2>
+          <div>
+            <p>Powered By</p>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1440x0"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="TestCards">
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/10dfe8c8aa7-HealthCheckups.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6c5479c6c0c-Vitamins.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/69588f95674-Diabetes.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/c507b2563fd-thyroid.png?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/eeb3fe3251f-WomenCare.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/355e9b77fb5-FeverInfection.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6e78a241e48-CovidCare.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/a953829ca96-Heart.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/94616a36a9a-Lifestyle.jpg?dim=256x0"
+            />
+          </div>
+          <div>
+            <img
+              src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/64444851b5e-BoneHealth.jpg?dim=256x0"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- this is the payment offers -->
+      <div id="offercontainer">
+        <div>
+          <h2>Payment Offers</h2>
+        </div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/banner/banner/a93d45ef9eb-HSBC.jpg?dim=1024x0"
+                alt=""
+              />
+              <div class="swiper-slide">
+                <img
+                  src="https://cdn01.pharmeasy.in/dam/banner/banner/f3c446e4108-AMAZON.jpg?dim=1024x0"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://cdn01.pharmeasy.in/dam/banner/banner/9466405c308-au.jpg?dim=1024x0"
+                  alt=""
+                />
+                <div class="swiper-slide">
+                  <img
+                    src="https://cdn01.pharmeasy.in/dam/banner/banner/0c5c9ec6841-mobikwik.jpg?dim=1024x0"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- this is shop by category cards -->
+      <div id="CategoryHeading">
+        <h2>Shop By Category</h2>
+      </div>
+      <div id="category">
+        <div>
+          <div>
+            <a href="../HTML/product.html">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/a7a03f6764393c65bab22e56de576a59.png?f=png?dim=256x0"
+                alt=""
+              />
+            </a>
+          </div>
+          <h3>Personal Care</h3>
+        </div>
+        <div>
+          <div>
+            <a href="../HTML/product.html">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/1e622b0308ec3ab48887512eaa3488a5.png?f=png?dim=256x0"
+                alt=""
+              />
+            </a>
+          </div>
+          <h3>Skin Care</h3>
+        </div>
+        <div>
+          <div>
+            <a href="../HTML/product.html">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/cfc8ee511609321e91eb86a34f5b2885.png?f=png?dim=256x0"
+                alt=""
+              />
+            </a>
+          </div>
+          <h3>Healthcare Devices</h3>
+        </div>
+        <div>
+          <div>
+            <a href="../HTML/product.html">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/335dae76832d370c94f0440f5ba89e1f.png?f=png?dim=256x0"
+                alt=""
+              />
+            </a>
+          </div>
+          <h3>Health Food & Drinks</h3>
+        </div>
+        <div>
+          <div>
+            <a href="../HTML/product.html">
+              <img
+                src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/dc96175686f135b5a22d1e57165d0246.png?f=png?dim=256x0"
+                alt=""
+              />
+            </a>
+          </div>
+          <h3>Home Care</h3>
+        </div>
+      </div>
+
+      <!-- this is banner -->
+      <div id="healthBanner">
+        <div>
+          <h1>
+            Become a
+            <img src="../images/plus logo.png" alt="" />
+            member
+          </h1>
+          <h3>And enjoy extra bachat on every order</h3>
+        </div>
+        <div>
+          <h3>
+            Save 5% on allopathic medicines, 50% on lab tests & get FREE
+            delivery with PLUS membership
+          </h3>
+          <div id="explore_now_btn">EXPLORE NOW</div>
+        </div>
+        <div>
+          <img
+            src="https://assets.pharmeasy.in/apothecary/_next/static/media/PlusFamily.22677720.png?dim=1440x0"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div></div>
     </div>
     <footer>
-        <!-- this is the reasons cards -->
+      <!-- this is the reasons cards -->
+      <div>
+        <h3>
+          <!-- dont delete this h3 tag -->
+        </h3>
+        <div><h3>Why Choose Us?</h3></div>
+        <div id="ReasonCards">
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/family.svg?dim=96x0"
+              alt=""
+            />
+            <h4>32 Million+</h4>
+            <p>Registered user as of Mar 31, 2022</p>
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/deliveryBoy.svg?dim=96x0"
+              alt=""
+            />
+            <h4>36 Million+</h4>
+            <p>Orders on Pharmeasy till date</p>
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/pincodeServed.svg?dim=96x0"
+              alt=""
+            />
+            <h4>99000+</h4>
+            <p>Unique items sold last 3 months</p>
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/locationMarker.svg?dim=96x0"
+              alt=""
+            />
+            <h4>19500+</h4>
+            <p>Pin codes serviced last 3 months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- banner -->
+      <div id="bannerDiv">
         <div>
-           <h3>
-            <!-- dont delete this h3 tag -->
-           </h3>
-            <div> <h3>Why Choose Us?</h3></div>
-            <div id="ReasonCards">
-                <div>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/family.svg?dim=96x0" alt="">
-                    <h4> 32 Million+</h4>
-                    <p>Registered user as of Mar 31, 2022</p>
-                </div>
-                <div>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/deliveryBoy.svg?dim=96x0" alt="">
-                    <h4> 36 Million+</h4>
-                    <p>Orders on Pharmeasy till date </p>
-                </div>
-                <div>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/pincodeServed.svg?dim=96x0" alt="">
-                    <h4> 99000+</h4>
-                    <p>Unique items sold last 3 months </p>
-                </div>
-                <div>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/locationMarker.svg?dim=96x0" alt="">
-                    <h4> 19500+</h4>
-                    <p>Pin codes serviced last 3 months </p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-        <!-- banner -->
-        <div id="bannerDiv">
-           
-                <div>
-                    <img src="../images/banner1.png" alt="">
-                </div>
-                <div>
-                    <h1>Simplifying
-                        Healthcare
-                        Impacting Lives</h1>
-                    <h4>Download the App for Free</h4>
-                  <div>
-                    <img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=256x0" alt="">
-                    <img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0" alt="">
-                  </div>
-                </div>
-                <div>
-                    <img src="../images/banner2.png" alt="">
-                </div>
-           
-         
-        </div>
-
-
-
-
-
-
-
-
-        <!-- this is the company details part  -->
-
-        <div id="Companydetail">
-            <div>
-                <h4>Top-Selling Healthcare Products:
-                </h4>
-                <p>Accu-Chek Active - 100 Strips
-                    | Supradyn Multivitamin Tablets
-                    | DR Morepen BG 03 - 50 Strips
-                    |
-                    Dettol Antiseptic Liquid
-                    |
-                    Ensure Diabetes Care Vanilla Sugar Free Jar
-                    |
-                    Dettol Instant Hand Sanitizer
-                    |
-                    Everherb Shilajit
-                    |
-                    Softovac SF Powder
-                    |
-                    Pediasure Premium Chocolate Refill</p>
-            </div>
-            <div>
-                <h4>Top-Selling Medicines:</h4>
-                <p>Dolovera Gel
-                    |
-                    Neurobion Forte
-                    |
-                    Chymoral Forte
-                    |
-                    Crocin Advance
-                    |
-                    Soframycin
-                    |
-                    Dexorange
-                    |
-                    Becadexamin
-                    |
-                    Folvite
-                    |
-                    Livogen
-                    |
-                    Becosules
-                    |
-                    Fourderm
-                    |
-                    Nurokind Plus
-                    |
-                    Burnol
-                    |
-                    Crocin 650
-                    |
-                    Mintop 5
-                    |
-                    Thrombophob
-                    |
-                    Evion 600</p>
-            </div>
-            <div>
-                <h4>COVID-19 Preventatives:
-                </h4>
-                <p>
-
-                    N95 Masks
-                    |
-                    Hand Sanitizers
-                    |
-                    Hand Gloves, Disinfectants, Thermometers & more!
-                </p>
-            </div>
-            <div>
-                <h4>Your One-Stop Online Pharmacy - MedEasyIn</h4>
-                <br><br>
-                <h4>We've got India Covered!</h4>
-                <p>
-                    We now deliver in 1000+ cities and towns across 22000+ pin codes. We thereby cover every nook and
-                    corner of the country! The major cities in which we deliver include Mumbai, Kolkata, Delhi,
-                    Bengaluru, Ahmedabad, Hyderabad, Chennai, Thane, Howrah, Pune, Gurgaon, Navi Mumbai, Jaipur, Noida,
-                    Lucknow, Ghaziabad & Vadodara.
-                </p>
-              
-                <h3>Say Goodbye to All Your Healthcare Worries With MedEasyIn!</h3>
-                <p>MedEasyIn is here to help you take it easy! We are amongst one of India's top online pharmacy and medical care platforms. It enables you to order pharmaceutical and healthcare products online by connecting you to registered retail pharmacies and get them delivered to your home. We are an online medical store, making your purchase easy, simple, and affordable!</p>
-
-                <h3>How Are We Making Lives Simpler With Our Online Medical Store?</h3>
-                <p>Our doorstep delivery service is available in PAN-India across top cities like Bangalore, Delhi, Mumbai, Kolkata, Hyderabad, Gurgaon, Noida, Pune, etc. Our online medical store also allows you to choose from 1 lakh+ products including OTC products and medical equipment. PharmEasy is a one-stop online medical platform where you can also book diagnostic tests including blood tests, full-body checkups, and other preventive health check-ups at an affordable cost, right from the comfort of your home. We have partnered with trusted & certified labs that arrange for a sample pick-up from the convenience of your home. They also provide you with timely reports.</p>
-
-                <h3>Why Are We The Most Preferred Online Pharmacy?</h3>
-                <p>Lucrative offers on our platform allow you to make payment online and via various payment wallets at a discounted price. Alternatively, you can also choose to pay cash on delivery as we deliver the products at your doorstep. We cater to all your pharmaceutical needs and also make ordering medicines online a hassle-free experience for you. We connect you only with registered retail pharmacies & certified diagnostic labs. We ensure that healthcare is affordable to all and make the process of ordering online simple.</p>
-                <h3>Sit Back & Relax While You Get Your Essentials Delivered Every Month!</h3>
-                <p>It’s tough to remember to refill every month, especially in the case of chronic diseases. PharmEasy’s subscription service not only ensures that you are reminded of your refills but also makes sure that you are never out on your medical essentials. You will get a reminder every month and your order will be delivered at your convenience!</p>
-            </div>
-        </div>
-
-
-
-
-
-
-
-         <!-- this is gorund footer -->
-    <div id="gorundfooter">
-        <div>
-            <h3>
-                Company
-
-            </h3>
-            <p>
-                About Us <br>
-                Careers <br>
-                Blog <br>
-                Partner with PharmEasy <br>
-                Sell at PharmEasy
-            </p>
-            <h3>Our Services</h3>
-            <p>
-                Order Medicine <br>
-                Healthcare Products <br>
-                Lab Tests <br>
-                Find Nearest Collection Centre <br>
-                Surgeries
-            </p>
+          <img src="../images/banner1.png" alt="" />
         </div>
         <div>
-            <h3> Featured Categories
-            </h3>
-            <p>
-
-
-                Mega Clearance Sale <br>
-                Personal Care <br>
-                Healthcare Devices <br>
-                Health Food and Drinks <br>
-                Home Care <br>
-                Mother and Baby Care <br>
-                Skin Care <br>
-                Fitness Supplements <br>
-                Sexual Wellness <br>
-                Ayurvedic Care <br>
-                Diabetic Care <br>
-                Health Condition <br>
-                Accessories & Wearables <br>
-                Beauty <br>
-                Elderly Care <br>
-                Top Products</p>
+          <h1>Simplifying Healthcare Impacting Lives</h1>
+          <h4>Download the App for Free</h4>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=256x0"
+              alt=""
+            />
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0"
+              alt=""
+            />
+          </div>
         </div>
         <div>
-            <h3>Need Help</h3>
-            <p>
-                Browse All Medicines<br>
-                Browse All Molecules<br>
-                Browse All Cities<br>
-                Browse All Areas<br>
-                Browse All Stores<br>
-                FAQs
-            </p>
+          <img src="../images/banner2.png" alt="" />
+        </div>
+      </div>
 
-            <h3>Policy Info</h3>
-            <p> Editorial Policy<br>
-                Privacy Policy<br>
-                Vulnerability Disclosure Policy<br>
-                Terms and Conditions<br>
-                Customer Support Policy<br>
-                Return Policy
-            </p>
+      <!-- this is the company details part  -->
+
+      <div id="Companydetail">
+        <div>
+          <h4>Top-Selling Healthcare Products:</h4>
+          <p>
+            Accu-Chek Active - 100 Strips | Supradyn Multivitamin Tablets | DR
+            Morepen BG 03 - 50 Strips | Dettol Antiseptic Liquid | Ensure
+            Diabetes Care Vanilla Sugar Free Jar | Dettol Instant Hand Sanitizer
+            | Everherb Shilajit | Softovac SF Powder | Pediasure Premium
+            Chocolate Refill
+          </p>
         </div>
         <div>
-            <h3> &nbsp; Follow us on</h3>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/Instagram.svg?dim=32x0" alt=""><img
-                    src="https://assets.pharmeasy.in/apothecary/images/facebook.svg?dim=32x0" alt=""><img
-                    src="https://assets.pharmeasy.in/apothecary/images/Youtube.svg?dim=32x0" alt=""><img
-                    src="https://assets.pharmeasy.in/apothecary/images/Twitter.svg?dim=32x0" alt="">
-            </div>
+          <h4>Top-Selling Medicines:</h4>
+          <p>
+            Dolovera Gel | Neurobion Forte | Chymoral Forte | Crocin Advance |
+            Soframycin | Dexorange | Becadexamin | Folvite | Livogen | Becosules
+            | Fourderm | Nurokind Plus | Burnol | Crocin 650 | Mintop 5 |
+            Thrombophob | Evion 600
+          </p>
         </div>
-    </div>
-
-
-
-
-
-    <!-- ground footer payment partners -->
-    <h3> &nbsp; Our Payment Partners</h3>
-    <div id="Partners">
         <div>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0" alt="">
-            </div>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
-
-            </div>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
-            </div>
-
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
-            </div>
-
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
-            </div>
-
-
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
-            </div>
-
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
-            </div>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
-            </div>
-
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
-            </div>
-            <div>
-                <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
-            </div>
+          <h4>COVID-19 Preventatives:</h4>
+          <p>
+            N95 Masks | Hand Sanitizers | Hand Gloves, Disinfectants,
+            Thermometers & more!
+          </p>
         </div>
-    </div>
+        <div>
+          <h4>Your One-Stop Online Pharmacy - MedEasyIn</h4>
+          <br /><br />
+          <h4>We've got India Covered!</h4>
+          <p>
+            We now deliver in 1000+ cities and towns across 22000+ pin codes. We
+            thereby cover every nook and corner of the country! The major cities
+            in which we deliver include Mumbai, Kolkata, Delhi, Bengaluru,
+            Ahmedabad, Hyderabad, Chennai, Thane, Howrah, Pune, Gurgaon, Navi
+            Mumbai, Jaipur, Noida, Lucknow, Ghaziabad & Vadodara.
+          </p>
+
+          <h3>Say Goodbye to All Your Healthcare Worries With MedEasyIn!</h3>
+          <p>
+            MedEasyIn is here to help you take it easy! We are amongst one of
+            India's top online pharmacy and medical care platforms. It enables
+            you to order pharmaceutical and healthcare products online by
+            connecting you to registered retail pharmacies and get them
+            delivered to your home. We are an online medical store, making your
+            purchase easy, simple, and affordable!
+          </p>
+
+          <h3>
+            How Are We Making Lives Simpler With Our Online Medical Store?
+          </h3>
+          <p>
+            Our doorstep delivery service is available in PAN-India across top
+            cities like Bangalore, Delhi, Mumbai, Kolkata, Hyderabad, Gurgaon,
+            Noida, Pune, etc. Our online medical store also allows you to choose
+            from 1 lakh+ products including OTC products and medical equipment.
+            PharmEasy is a one-stop online medical platform where you can also
+            book diagnostic tests including blood tests, full-body checkups, and
+            other preventive health check-ups at an affordable cost, right from
+            the comfort of your home. We have partnered with trusted & certified
+            labs that arrange for a sample pick-up from the convenience of your
+            home. They also provide you with timely reports.
+          </p>
+
+          <h3>Why Are We The Most Preferred Online Pharmacy?</h3>
+          <p>
+            Lucrative offers on our platform allow you to make payment online
+            and via various payment wallets at a discounted price.
+            Alternatively, you can also choose to pay cash on delivery as we
+            deliver the products at your doorstep. We cater to all your
+            pharmaceutical needs and also make ordering medicines online a
+            hassle-free experience for you. We connect you only with registered
+            retail pharmacies & certified diagnostic labs. We ensure that
+            healthcare is affordable to all and make the process of ordering
+            online simple.
+          </p>
+          <h3>
+            Sit Back & Relax While You Get Your Essentials Delivered Every
+            Month!
+          </h3>
+          <p>
+            It’s tough to remember to refill every month, especially in the case
+            of chronic diseases. PharmEasy’s subscription service not only
+            ensures that you are reminded of your refills but also makes sure
+            that you are never out on your medical essentials. You will get a
+            reminder every month and your order will be delivered at your
+            convenience!
+          </p>
+        </div>
+      </div>
+
+      <!-- this is gorund footer -->
+      <div id="gorundfooter">
+        <div>
+          <h3>Company</h3>
+          <p>
+            About Us <br />
+            Careers <br />
+            Blog <br />
+            Partner with PharmEasy <br />
+            Sell at PharmEasy
+          </p>
+          <h3>Our Services</h3>
+          <p>
+            Order Medicine <br />
+            Healthcare Products <br />
+            Lab Tests <br />
+            Find Nearest Collection Centre <br />
+            Surgeries
+          </p>
+        </div>
+        <div>
+          <h3>Featured Categories</h3>
+          <p>
+            Mega Clearance Sale <br />
+            Personal Care <br />
+            Healthcare Devices <br />
+            Health Food and Drinks <br />
+            Home Care <br />
+            Mother and Baby Care <br />
+            Skin Care <br />
+            Fitness Supplements <br />
+            Sexual Wellness <br />
+            Ayurvedic Care <br />
+            Diabetic Care <br />
+            Health Condition <br />
+            Accessories & Wearables <br />
+            Beauty <br />
+            Elderly Care <br />
+            Top Products
+          </p>
+        </div>
+        <div>
+          <h3>Need Help</h3>
+          <p>
+            Browse All Medicines<br />
+            Browse All Molecules<br />
+            Browse All Cities<br />
+            Browse All Areas<br />
+            Browse All Stores<br />
+            FAQs
+          </p>
+
+          <h3>Policy Info</h3>
+          <p>
+            Editorial Policy<br />
+            Privacy Policy<br />
+            Vulnerability Disclosure Policy<br />
+            Terms and Conditions<br />
+            Customer Support Policy<br />
+            Return Policy
+          </p>
+        </div>
+        <div>
+          <h3>&nbsp; Follow us on</h3>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/Instagram.svg?dim=32x0"
+              alt=""
+            /><img
+              src="https://assets.pharmeasy.in/apothecary/images/facebook.svg?dim=32x0"
+              alt=""
+            /><img
+              src="https://assets.pharmeasy.in/apothecary/images/Youtube.svg?dim=32x0"
+              alt=""
+            /><img
+              src="https://assets.pharmeasy.in/apothecary/images/Twitter.svg?dim=32x0"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- ground footer payment partners -->
+      <h3>&nbsp; Our Payment Partners</h3>
+      <div id="Partners">
+        <div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false
-            },
-            loop: true,
-            //  pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        //  pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
-        });
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
-</body>
-
+  </body>
 </html>
 <script src="../Scripts/home.js"></script>

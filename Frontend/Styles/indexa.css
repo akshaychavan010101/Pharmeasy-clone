@@ -1,5 +1,5 @@
 /* this is the top of the nav */
-*{
+* {
     font-family: "Poppins";
 }
 
@@ -60,7 +60,6 @@
     width: 10%;
     font-size: 20px;
     padding-left: 30px;
-    /* border: 1px solid; */
     margin: auto;
 }
 
@@ -84,7 +83,7 @@
     justify-content: flex-end;
 }
 
-#search>div>button {
+#search_btn {
     width: 90%;
     border: none;
     height: 100%;
@@ -95,7 +94,10 @@
     font-weight: bold;
 }
 
-
+#search_btn:hover{
+    background-color: rgb(1, 77, 77);
+    cursor: pointer;
+}
 
 #otherIcons {
     width: 30%;
@@ -149,7 +151,7 @@
     width: 60%;
     margin: auto;
     /* margin-top: 5px; */
-    /* justify-content: space-between;
+/* justify-content: space-between;
     font-size: 15px;
     font-family: Inter, sans-serif;
     font-weight: bold;
@@ -163,53 +165,61 @@
 
 } */
 
-.menu-bar{
+.menu-bar {
     background: #f3fbfb;
     text-align: center;
 }
- .menu-bar ul{
+
+.menu-bar ul {
     display: inline-flex;
     list-style: none;
     color: #fff;
- }
- .menu-bar ul li {
-     /* border: 1px solid; */
+}
+
+.menu-bar ul li {
+    /* border: 1px solid; */
     width: 120px;
     margin: 1px;
-    
-   
- }
-a{
-text-decoration-line: none;
-color:#000;
-}
-.menu-bar ul li:hover{
-color: rgb(54, 105, 105);
-font-weight: bold;
+
 
 }
-.subm{
-display: none;
+
+a {
+    text-decoration-line: none;
+    color: #000;
 }
-.menu-bar ul li:hover .subm{
-display: block;
-position: relative;
-/* background-color: rgb(153, 208, 204); */
-margin-top: 10px;
-text-align: left;
-border-radius: 10px;
-/* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-/* border: 10px solid black; */
+
+.menu-bar ul li:hover {
+    color: rgb(54, 105, 105);
+    font-weight: bold;
 
 }
-.menu-bar ul li:hover .subm ul{
-display: block;
-margin:10px ;
+
+.subm {
+    display: none;
 }
-.menu-bar ul li:hover .subm ul li{
-width: 150px;
-padding: 10px;
-background: transparent;
+
+.menu-bar ul li:hover .subm {
+    display: block;
+    position: relative;
+    /* background-color: rgb(153, 208, 204); */
+    margin-top: 10px;
+    text-align: left;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* border: 10px solid black; */
+
+}
+
+.menu-bar ul li:hover .subm ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .subm ul li {
+    width: 150px;
+    padding: 10px;
+    background: transparent;
 
 }
 
@@ -344,6 +354,13 @@ background: transparent;
 
 #TestCards>div>img {
     width: 100%;
+
+}
+
+#TestCards>div>img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -381,7 +398,6 @@ background: transparent;
 }
 
 #category {
-    /* border: 1px solid red; */
     width: 90%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -392,43 +408,40 @@ background: transparent;
 }
 
 #category>div {
-    /* border: 1px solid rgb(0, 255, 13); */
     text-align: center;
 
 
 }
 
 #category>div>div {
-    /* border: 1px solid blue; */
     width: 60%;
     margin: auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
 
+#category>div>div a img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
 #category>div>div>a img {
-    /* border: 1px solid; */
     width: 95%;
     display: block;
     margin: auto;
     border: none;
-   
 }
 
 #CategoryHeading {
     margin: auto;
     margin-top: 100px;
-    /* border: 1px solid; */
     width: 90%;
 }
 
 
 #healthBanner {
-    /* border: 1px solid red; */
-    /* width:90%; */
     margin: auto;
     display: flex;
-    ;
     justify-content: space-around;
     background-color: #8678DE;
     font-family: Inter, sans-serif;
@@ -437,11 +450,7 @@ background: transparent;
 
 #healthBanner>div {
     width: 30%;
-    /* border: 1px solid gray; */
     color: white;
-
-
-
 }
 
 #healthBanner>div>h1>img {
@@ -449,11 +458,18 @@ background: transparent;
 
 }
 
-#healthBanner>div:nth-child(2)>div {
+#explore_now_btn {
     width: fit-content;
-    background-color: #f3b61b;
+    background-color: #fec430;
     border-radius: 5px;
-    padding: 10px
+    padding: 10px;
+    
+}
+
+#explore_now_btn:hover{
+    background-color: #f8b305;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 #healthBanner>div:nth-child(3)>img {
@@ -468,7 +484,8 @@ background: transparent;
 
 
 footer>div>h3+div {
-    border:0.1px solid rgb(241, 235, 240); ;
+    border: 0.1px solid rgb(241, 235, 240);
+    ;
     background-color: rgb(241, 235, 240);
     font-size: 20px;
     padding-left: 85px;

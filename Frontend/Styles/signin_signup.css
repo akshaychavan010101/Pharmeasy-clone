@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.design_div {
+    border: none;
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.container {
+    border: none;
+    width: fit-content;
+    margin-left: 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #1485d1;
+    font-weight: 500;
+}
+
+.sign_in_form {
+    border: none;
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_in_form form {
+    border: none;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sign_in_form form label {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.sign_in_form form input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.sign_in_form form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(6, 190, 104);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sign_in_form form input[type="submit"]:hover {
+    background-color: rgb(5, 151, 83);
+}
+
+.continue_with_google {
+    width: 400px;
+    height: 100px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.continue_with_google div {
+    width: 80%;
+    height: 48%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.continue_with_google div:nth-child(2) {
+    width: 40%;
+    background-color: rgb(235, 33, 33);
+}
+
+.google_click {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* signup */
+
+.signup_container {
+    border: none;
+    width: fit-content;
+    margin-left: 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup_container h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.signup_form {
+    border: none;
+    width: 400px;
+    height: 600px;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    left: 60%;
+}
+
+.signup_form form {
+    border: none;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.signup_form form label {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.signup_form form input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.signup_form form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(6, 190, 104);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.signup_form form input[type="submit"]:hover {
+    background-color: rgb(5, 151, 83);
+}
+
+.signup_form form input[type="submit"]:disabled {
+    background-color: rgb(6, 190, 104);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.signup_form form input[type="number"]::-webkit-outer-spin-button,
+.signup_form form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    video{
+        width: 99%;
+    }
+
+    .container{
+        width: fit-content;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign_in_form {
+        width: 300px;
+    }
+
+    .sign_in_form form {
+        width: 80%;
+    }
+
+    .continue_with_google {
+        width: 300px;
+    }
+
+    .signup_form {
+        width: 300px;
+        left: 10%;
+    }
+
+    .signup_form form {
+        width: 80%;
+    }
+
+    .signup_form form input[type="submit"] {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(6, 190, 104);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .signup_form form input[type="submit"]:hover {
+        background-color: rgb(5, 151, 83);
+    }
+
+    .signup_form form input[type="submit"]:disabled {
+        background-color: rgb(6, 190, 104);
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+   
+
+}
