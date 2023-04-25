@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/5cb8a0be4f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Styles/signin_signup.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
+    "></script>
+  </head>
+  <body>
+    <div class="design_div">
+      <video
+        src="../images/signinpage_video.mp4"
+        autoplay
+        type="video/mp4"
+        loop
+      ></video>
+    </div>
+    <div class="container">
+      <h1>SignIn</h1>
+      <div class="sign_in_form">
+        <form id="signin_form" onsubmit="signinFun(event)">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <input type="submit" value="Sign In" />
+          <p>Dont have an account? <a href="#SignUp" id="SignUp">SignUp</a></p>
+          <div>
+            <a href="#" onclick="forgotFun()">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
+      <div class="continue_with_google">
+        <div>
+          <h3>Continue with</h3>
+        </div>
+        <div class="google_click" onclick="googleFun(event)">
+          <i class="fa-brands fa-google"></i><span>Google</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="password_edit_model">
+      <button onclick="closeModel()" >❌</button>
+      <form onsubmit="sendlink(event)">
+        <label for="email_to_send_link"
+          >Enter your email below to get a link</label
+        >
+        <input
+          type="email"
+          name="email_to_send_link"
+          id="email_to_send_link"
+          placeholder="Enter your email"
+          required
+        />
+        <input type="submit" value="Send Link" id="send_link" />
+      </form>
+    </div>
+
+    <div class="signup_form">
+      <h1>SignUp</h1>
+      <form id="signup_form" onsubmit="signupFun(event)">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required />
+        <label for="name">Contact</label>
+        <input
+          type="number"
+          name="contact"
+          placeholder="Enter your contact"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <input type="submit" value="Sign Up" />
+        <p>Already have a account? <a href="#SignIn" id="SignIn">SignIn</a></p>
+      </form>
+    </div>
+
+    <script src="../Scripts/signin_signup.js"></script>
+  </body>
+</html>

@@ -29,6 +29,10 @@ const userSchema = new mongoose.Schema(
     avatar: {
       type: String,
     },
+    date: {
+      type: Date,
+      default: Date.now,
+    },
   },
   { versionKey: false }
 );
@@ -44,5 +48,3 @@ userSchema.pre("save", function () {
 const User = mongoose.model("user", userSchema);
 
 module.exports = { User };
-
-

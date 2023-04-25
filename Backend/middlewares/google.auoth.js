@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://127.0.0.1:5500/Frontend/HTML/indexa.html",
+      callbackURL: "https://medeasyin.netlify.app/HTML/indexa.html",
       scope: ["email", "profile"],
     },
     async function (accessToken, refreshToken, profile, cb) {
@@ -25,6 +25,7 @@ passport.use(
         email: profile.emails[0].value,
         password: uuid(),
         avatar: profile.photos[0].value,
+        role : "user"
       });
       await user.save();
       return cb(null, user);

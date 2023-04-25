@@ -10,16 +10,14 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
-
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-
 app.use("/user", UserRouter);
 app.use("/product", ProductRouter);
 
-app.listen(process.env.PORT, async() => {
+app.listen(process.env.PORT, async () => {
   try {
     await connection;
     console.log("Listening on port 3000");

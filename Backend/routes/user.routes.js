@@ -2,15 +2,23 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const bcrypt = require("bcrypt");
+const sgMail = require("@sendgrid/mail");
 const UserRouter = express.Router();
 const { User } = require("../models/user.model");
 const redis = require("redis");
 const { authentication } = require("../middlewares/authentication");
 const { Blacklist } = require("../models/blacklist.model");
-const passport = require("../middlewares/google.auoth");
+const passport = require("passport");
+require("../middlewares/google.auoth");
+const uuid = require("uuid").v4;
 
-UserRouter.post("/register", async (req, res) => {
+UserRouter.post("/signup", async (req, res) => {
   try {
+    let exist = await User.findOne({ email: req.body.email });
+    if (exist) {
+      return res.status(400).send({ error: "User already exists" });
+    }
+
     const { name, contact, email, password, role } = req.body;
     const user = new User({ name, contact, email, password, role });
     await user.save();
@@ -20,13 +28,13 @@ UserRouter.post("/register", async (req, res) => {
   }
 });
 
-UserRouter.post("/login", async (req, res) => {
+UserRouter.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
     let user = await User.findOne({ email });
     let TosendUser = user;
     if (!user) {
-      return res.status(400).send({ error: "Invalid Credentials" });
+      return res.status(400).send({ error: "User Does Not Exists" });
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
@@ -73,6 +81,78 @@ UserRouter.get(
     console.log(req.user);
   }
 );
+
+// sending the password reset link to the user via email
+UserRouter.get("/forgot-password", (req, res) => {
+  try {
+    const { email } = req.query;
+    if (!email) {
+      return res.send({ msg: "Please provide email" });
+    }
+    let webid = uuid();
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    // change the url to send;
+    const messages = [
+      {
+        to: `${email}`,
+        from: "akki010102@gmail.com",
+        subject: "Change Password",
+        text: "Hello from MedEasyIn",
+        html: `
+      <h1>MedEasyIn</h1>
+      <p>Click on the link below to change your password</p>
+      <b>This is a one time link to update your password</b>
+      <a href="https://medeasyin-password-update.netlify.app?webid=${webid}&email=${email}">Click here to reset your password</a>
+`,
+      },
+    ];
+    sgMail.send(messages).then((success, error) => {
+      if (error) {
+        res.send({
+          msg: "Something Went Wrong",
+          Error: error.response.body,
+        });
+      } else {
+        res.send({ msg: "Check your mail box to reset your password" });
+      }
+    });
+  } catch (error) {
+    res.send({ msg: error });
+  }
+});
+
+UserRouter.patch("/password-update", async (req, res) => {
+  try {
+    const { email, password, webid } = req.query;
+
+    if(email === undefined || password === undefined || webid === undefined){
+      return res.json({ msg: "Please provide all the details" });
+    }
+
+
+    const user = await User.findOne({ email });
+    console.log(email, password, webid,user);
+    if (user) {
+      if (webid === undefined) {
+        return res.json({ msg: "This link is not valid" });
+      }
+      if (user.webid.includes(webid)) {
+        return res.json({ msg: "This link is already used" });
+      }
+
+      user.password = password;
+      user.webid.push(webid);
+
+      await user.save();
+      res.status(200).json({ msg: "Password updated successfully" });
+    } else {
+      res.send({ msg: "Cannot find the user", error : "Error" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.send({ msg: "server error", error });
+  }
+});
 
 UserRouter.get("/refresh-token", async (req, res) => {
   try {
