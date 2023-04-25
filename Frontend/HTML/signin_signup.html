@@ -53,9 +53,11 @@
           />
           <input type="submit" value="Sign In" />
           <p>Dont have an account? <a href="#SignUp" id="SignUp">SignUp</a></p>
+          <div>
+            <a href="#" onclick="forgotFun()">Forgot Password?</a>
+          </div>
         </form>
       </div>
-
       <div class="continue_with_google">
         <div>
           <h3>Continue with</h3>
@@ -64,6 +66,23 @@
           <i class="fa-brands fa-google"></i><span>Google</span>
         </div>
       </div>
+    </div>
+
+    <div id="password_edit_model">
+      <button onclick="closeModel()" >❌</button>
+      <form onsubmit="sendlink(event)">
+        <label for="email_to_send_link"
+          >Enter your email below to get a link</label
+        >
+        <input
+          type="email"
+          name="email_to_send_link"
+          id="email_to_send_link"
+          placeholder="Enter your email"
+          required
+        />
+        <input type="submit" value="Send Link" id="send_link" />
+      </form>
     </div>
 
     <div class="signup_form">

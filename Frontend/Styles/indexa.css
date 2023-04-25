@@ -1,6 +1,7 @@
 /* this is the top of the nav */
 * {
-    font-family: "Poppins";
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
 }
 
 #top {
@@ -183,97 +184,88 @@
 
 } */
 
+
+
 .menu-bar {
+    width: 100%;
+    padding: 0.5rem;
     background: #f3fbfb;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.menu-bar ul {
-    display: inline-flex;
-    list-style: none;
-    color: #fff;
+.menu-bar>div {
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu-bar ul li {
-    border: 1px solid;
-    width: 150px;
-    margin-top: 1px;
-    border-radius: 10px;
+
+.menu-bar>div>a {
+    width: 100%;
+    height: 100%;
+    padding: 0.3rem;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.drop_down_div {
+    width: 25%;
+    position: absolute;
+    background-color: white;
+    align-items: center;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: none;
-    background: #f3fbfb;
-    font-weight: bold;
-    color: rgb(54, 105, 105);
+    margin-top: 250px;
+    margin-left: 180px;
+    display: none;
+}
 
+.drop_down_div > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.drop_down_div>div>ul {
+    list-style: none;
+    padding: 0 0.5rem;
+}
+
+.drop_down_div>div>ul>li {
+    list-style: none;
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+
+}
+
+.drop_down_div>div>ul>li a:hover {
+    color: rgb(9, 125, 192);
+    text-decoration-line: underline;
+}
+
+
+/* keep the drop down menu when hover over it */
+
+.menu-bar>div>a:hover + .drop_down_div {
+    display: block;
+}
+
+.drop_down_div:hover {
+    display: block;
 }
 
 a {
     text-decoration-line: none;
     color: #000;
 }
-
-.menu-bar ul li:hover {
-    color: rgb(54, 105, 105);
-    font-weight: bold;
-}
-
-.subm {
-    display: none;
-    width: fit-content;
-}
-
-
-
-.subm a {
-    font-size: 12px;
-}
-
-.subm li {
-    list-style: none;
-    margin-left: -20px;
-}
-
-.subm li:hover{
-    transform:  scale(1.1);
-    transition: all 0.3s ease-in-out;
-}
-
-.subm  a:hover {
-    text-decoration-line:  underline;
-    color: rgb(9, 127, 211);
-}
-
-
-
-.menu-bar ul li:hover .subm {
-    display: block;
-    position: relative;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    margin-top: 10px;
-    text-align: left;
-    border-radius: 10px;
-}
-
-.menu-bar ul li:hover .subm ul {
-    display: block;
-    margin: 10px;
-}
-
-.menu-bar ul li:hover .subm ul li {
-    width: 150px;
-    padding: 10px;
-    background: transparent;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -488,7 +480,6 @@ a {
     display: flex;
     justify-content: space-around;
     background-color: #8678DE;
-    font-family: Inter, sans-serif;
     margin-top: 100px;
 }
 
@@ -500,6 +491,11 @@ a {
 #healthBanner>div>h1>img {
     width: 22%;
 
+}
+
+#explore_above_text {
+    /* letter-spacing: 1.5px; */
+    word-spacing: 2.5px;
 }
 
 #explore_now_btn {

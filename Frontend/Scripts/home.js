@@ -1,3 +1,29 @@
+// swiper
+
+const swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  //  pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+// ----------------------------------------------------------
+
+
+
 let arr = ["Medicines", "Home care", "Child care", "Food & Drinks", "Hygien"];
 let Question = document.getElementById("Question");
 let i = 0;

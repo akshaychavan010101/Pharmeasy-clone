@@ -102,7 +102,7 @@ UserRouter.get("/forgot-password", (req, res) => {
       <h1>MedEasyIn</h1>
       <p>Click on the link below to change your password</p>
       <b>This is a one time link to update your password</b>
-      <a href="https://medeasyin-password-update.netlify.app?webid=${webid}">Click here to reset your password</a>
+      <a href="https://medeasyin-password-update.netlify.app?webid=${webid}&email=${email}">Click here to reset your password</a>
 `,
       },
     ];
@@ -124,7 +124,14 @@ UserRouter.get("/forgot-password", (req, res) => {
 UserRouter.patch("/password-update", async (req, res) => {
   try {
     const { email, password, webid } = req.query;
+
+    if(email === undefined || password === undefined || webid === undefined){
+      return res.json({ msg: "Please provide all the details" });
+    }
+
+
     const user = await User.findOne({ email });
+    console.log(email, password, webid,user);
     if (user) {
       if (webid === undefined) {
         return res.json({ msg: "This link is not valid" });
@@ -139,7 +146,7 @@ UserRouter.patch("/password-update", async (req, res) => {
       await user.save();
       res.status(200).json({ msg: "Password updated successfully" });
     } else {
-      res.send({ msg: "something went wrong" });
+      res.send({ msg: "Cannot find the user", error : "Error" });
     }
   } catch (error) {
     console.log(error);
