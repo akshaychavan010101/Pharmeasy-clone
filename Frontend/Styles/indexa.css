@@ -42,10 +42,6 @@
 }
 
 
-
-
-
-
 #search {
     width: 35%;
     height: 50px;
@@ -94,7 +90,7 @@
     font-weight: bold;
 }
 
-#search_btn:hover{
+#search_btn:hover {
     background-color: rgb(1, 77, 77);
     cursor: pointer;
 }
@@ -132,6 +128,28 @@
     padding: 10px;
 }
 
+#user_drop_list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-top: 10px;
+    text-align: left;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    margin-top: 50px;
+}
+
+#user_drop_list>li {
+    width: 100px;
+    padding: 10px;
+    background: transparent;
+    list-style: none;
+}
+
+#user_drop_list>li>a:hover {
+    color: rgb(9, 125, 192);
+}
 
 
 
@@ -177,10 +195,14 @@
 }
 
 .menu-bar ul li {
-    /* border: 1px solid; */
-    width: 120px;
-    margin: 1px;
-
+    border: 1px solid;
+    width: 150px;
+    margin-top: 1px;
+    border-radius: 10px;
+    border: none;
+    background: #f3fbfb;
+    font-weight: bold;
+    color: rgb(54, 105, 105);
 
 }
 
@@ -192,23 +214,44 @@ a {
 .menu-bar ul li:hover {
     color: rgb(54, 105, 105);
     font-weight: bold;
-
 }
 
 .subm {
     display: none;
+    width: fit-content;
 }
+
+
+
+.subm a {
+    font-size: 12px;
+}
+
+.subm li {
+    list-style: none;
+    margin-left: -20px;
+}
+
+.subm li:hover{
+    transform:  scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.subm  a:hover {
+    text-decoration-line:  underline;
+    color: rgb(9, 127, 211);
+}
+
+
 
 .menu-bar ul li:hover .subm {
     display: block;
     position: relative;
-    /* background-color: rgb(153, 208, 204); */
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
     margin-top: 10px;
     text-align: left;
     border-radius: 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* border: 10px solid black; */
-
 }
 
 .menu-bar ul li:hover .subm ul {
@@ -220,8 +263,9 @@ a {
     width: 150px;
     padding: 10px;
     background: transparent;
-
 }
+
+
 
 
 
@@ -420,7 +464,7 @@ a {
 
 }
 
-#category>div>div a img:hover{
+#category>div>div a img:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
 }
@@ -463,10 +507,10 @@ a {
     background-color: #fec430;
     border-radius: 5px;
     padding: 10px;
-    
+
 }
 
-#explore_now_btn:hover{
+#explore_now_btn:hover {
     background-color: #f8b305;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
